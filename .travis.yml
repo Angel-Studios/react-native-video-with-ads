@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - 10
+script: echo "No test, just release"
+env:
+  global:
+  - export GIT_AUTHOR_NAME="EndemolShineGroupUser"
+  - export GIT_AUTHOR_EMAIL="tech@endemolshine.com"
+  - export GIT_COMMITTER_NAME="EndemolShineGroupUser"
+  - export GIT_COMMITTER_EMAIL="tech@endemolshine.com"
+  - secure: PA5Fk/3BNtxZ9ilgjWDBc9qTVmwNRD8QNlv/BZXjOCEBw9tkJk4FJYrDV5ygUqS6yW3dDogvMEa5xrgrH8mYiJPVHkUAh8P/8yBDURXovktDWJpBygQ3azh9qZf2DyQtLRdWIeAr8LS2HI+0g9YcSrUA07MVwAzJYrIzPqxROit7sEGpexYucnYrnWiYjlPyRLe/w683jpthqYnPrEBiBBC7KRHkKgJ40t/7KJC1uAyKtxUiiN0Z/qioqeKdKXo8K461CCTwKW7hxKWHDlJ2ZJC8/8Ffv0i2wswi3dFcleDqUZtK/T88+JbDk5FuEXLF7CvIf5g15DkDJ4XUI+Sgl2Z4Taiv33lUtr/lHGV9uO1JHwd+bVqiaZJE8kU1TIjrm+JTs4aCSMeLQwNLgCX+lMUk0waPfEa8bFfMlivbZyQ7+UX5zx9O7W7L8k6cH9RF7tXyCXCExDSAcK20DTU0oowzSNincAGcqPs0MC+Uc2WEx68tGRlDRZ+vvuOBBPILb7ncrGU7xEZl9/Eyjg/Xcrb7DFtAX05ynRuI+pzk0T+oXCsjpkvGBGbpFs0AS9h7lkbRe6+sPYNd11R/w3y1j/oUsXbOQhchI/XuVSDhN+YeT4heWYtl0fa03HBTXSyINj1PNJyJraCrZbkfJax98rwBK4dq/mWQ5zI8/fswNJY=
+  - secure: jnwv/k1HwUnNsrtV48msgTtGD1YQZZVL7X25EoWYSQnWsSmAAb7p9ckD5JjY48PfhTbdyL6wh3FzH3S8j1wDUJ0mULsfkIX34t5nJN51UWJ5aNyLlSVFh6OxogzLFHYaa7xPU69/PBZ96jrOQ9bXKbB02QNxKKTomWJvi/vMZE0cOt/Q0+pEOgFMF2InAHSCf+Va1UfflmJ68UYIc6PCZfZuOVE10eWAKn9HMR2uYVDCezrx5W6asbhyoCH4nbJKOK41J771ziRnrj6HP2ZevHeahFV1lmTKoszg5VOx0q0o2iHe11OJOn274ZQVfjjeRV8ulEh3pLwQg9t/oRilusXkQYbwPz4OzXzFrOsPVp9veqHF0T+nUORfMh2+f+H+QY+54IwuFVhMF/zCQfzNYsAODg0I21p1FtvG/G+si/CYXa9b5c8ATCkWc6FU3NKEd7oWTh3/KAZCMuWzAk3LAjK4+1cUa3moWrHuszbtsPTiKn9Vn7ljpmNneMDeNTPhHRf9PlIpv1AxNkJQ2HYfei+jCLsj4w9QimRuoKVPw+4CLqujwPBt9ML1jQaW2NeQdL0c+jVwZlVLX7zFqREkuqrRQRvpfpokIIzX0CxBwLfQ68U1Qm2dB6cggFQXbVyY7zl2hzZIxSb9bHWrSrUJEqJuzADv2eM6DJTCgDMsUDI=
+jobs:
+  include:
+  - stage: release
+    if: branch = master
+    after_success:
+    - yarn semantic-release
