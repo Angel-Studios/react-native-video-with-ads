@@ -1,31 +1,12 @@
 {
-    "name": "@endemolshinegroup/react-native-video-with-ads",
+    "name": "react-native-video-with-ads",
     "version": "0.0.1",
     "description": "A <Video /> element for react-native, with Ad support",
     "main": "Video.js",
     "license": "MIT",
-    "author": "Brent Vatne <brentvatne@gmail.com> (https://github.com/brentvatne)",
-    "contributors": [
-        {
-            "name": "Isaiah Grey",
-            "email": "isaiahgrey@gmail.com"
-        },
-        {
-            "name": "Johannes Lumpe",
-            "email": "johannes@lum.pe"
-        },
-        {
-            "name": "Baris Sencan",
-            "email": "baris.sncn@gmail.com"
-        },
-        {
-            "name": "Hampton Maxwell",
-            "email": "me@hamptonmaxwell.com"
-        }
-    ],
     "repository": {
         "type": "git",
-        "url": "git@github.com:EndemolShineGroup/react-native-video-with-ads.git"
+        "url": "git@github.com:VidAngel/react-native-video-with-ads.git"
     },
     "devDependencies": {
         "babel-eslint": "5.0.0-beta8",
