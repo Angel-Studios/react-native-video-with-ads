@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.summary        = package['description']
   s.description    = package['description']
   s.license        = package['license']
+  s.authors        = package['author']
   s.author         = package['author']
   s.homepage       = 'https://github.com/VidAngel/react-native-video-with-ads'
   s.source       = { :git => "https://github.com/VidAngel/react-native-video-with-ads.git", :tag => "#{s.version}" }
